@@ -1,0 +1,25 @@
+{
+  "name": "task-runner-grunt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ravi-ka/Task-Runner.git"
+  },
+  "author": "Ravisankar Ka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ravi-ka/Task-Runner/issues"
+  },
+  "homepage": "https://github.com/Ravi-ka/Task-Runner#readme",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1"
+  }
+}
