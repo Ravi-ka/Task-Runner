@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
-  // 1. Configure the task
+  //  Configure the task
   grunt.initConfig({
-    //   2. Specify tasks
+    //   Specify tasks - uglify
     uglify: {
       target: {
         files: {
@@ -9,10 +9,25 @@ module.exports = function (grunt) {
         },
       },
     },
+    // Configure minify css
+    cssmin: {
+      target: {
+        files: [
+          {
+            expand: true,
+            cwd: "src/css",
+            src: ["*.css", "!*.min.css"],
+            dest: "dest/css",
+            ext: ".min.css",
+          },
+        ],
+      },
+    },
   });
 
-  // 3. Load the libraries
+  // Load the libraries
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  // 4. Setting up tasks
-  grunt.registerTask("default", ["uglify"]);
+  grunt.loadNpmTasks("grunt-contrib-cssmin");
+  // Setting up tasks
+  grunt.registerTask("default", ["uglify", "cssmin"]);
 };
